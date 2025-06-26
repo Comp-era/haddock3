@@ -30,7 +30,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
    ```bash
    git clone https://github.com/<username>/haddock3-mpi-container.git
-   cd haddock3-mpi-container/singularity
+   cd Apptainer-Container-for-HADDOCK3/apptainer_reciepe
    ```
 
 2. **Build** (Apptainer or Singularity)
