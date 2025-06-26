@@ -4,7 +4,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```plaintext
 ├── singularity/                  # Container definition files
@@ -24,7 +24,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. **Clone**
 
@@ -82,7 +82,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
          --ServerApp.root_dir=$HOME/haddock3-mpi-container
      ```
 
-   ⚠️ **Note:** Some environments won’t auto-launch a browser. In that case:
+    **Note:** Some environments won’t auto-launch a browser. In that case:
 
    1. Copy the `http://127.0.0.1:8888/...` URL shown and paste it in your browser.
    2. Or run:
@@ -107,7 +107,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 ---
 
-## 📚 Resources & Tutorials
+##  Resources & Tutorials
 
 - **Apptainer Installation & Usage**: Detailed installation instructions and usage examples can be found on the official docs: [apptainer.org/docs/admin/main/installation.html](https://apptainer.org/docs/admin/main/installation.html)
 - **Official HADDOCK3 Tutorials**: Visit the Bonvin lab’s educational page for step-by-step HADDOCK3 tutorials and walkthroughs: [bonvinlab.org/education/HADDOCK3](https://www.bonvinlab.org/education/HADDOCK3/)
@@ -115,7 +115,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 ---
 
-## 🛠️ Requirements
+##  Requirements
 
 - **Host**: Linux with Apptainer or Singularity installed
 - **Disk**: ≥ 2 GB free for building
@@ -123,7 +123,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 ---
 
-## 📖 Documentation
+##  Documentation
 
 See the `docs/` folder:
 
@@ -132,7 +132,7 @@ See the `docs/` folder:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for:
 
@@ -142,7 +142,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for:
 
 ---
 
-## 📜 License
+##  License
 
 MIT License © 2025 Shantanu Khatri.
 
