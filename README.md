@@ -7,19 +7,15 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 ##  Repository Structure
 
 ```plaintext
-├── singularity/                  # Container definition files
-│   └── HADDOCK3.def              # Apptainer/Singularity definition
-├── docs/                         # Documentation and tutorials
-│   ├── usage.md                  # Usage guide: shell, exec, Jupyter
-│   └── troubleshooting.md        # Common build/run issues
-├── examples/                     # Demo notebooks & scripts
-│   ├── dock-analysis.ipynb       # Example: parsing docking outputs
-│   ├── mpi-launch.sh             # Example: multi-node MPI run script
-│   └── notebook-setup.sh         # Helper: launch notebooks easily
+├── apptainer_recipe/                  
+│   └── HADDOCK3.def              # Apptainer/Singularity definition file
+├── docs/                         # Documentation 
+│   ├── usage.md                  # Usage guide
+├── scripts/                      # Scripts
+│   ├── slurm_run.sh              # Multi-node MPI run script
 ├── LICENSE                       # MIT License
-├── CONTRIBUTING.md               # Contribution guidelines
-├── .gitignore                    # Git ignore rules
-└── README.md                     # This overview
+├──  README.md                    # Overview
+└── CONTRIBUTING.md               # Contribution guidelines
 ```
 
 ---
@@ -29,7 +25,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 1. **Clone**
 
    ```bash
-   git clone https://github.com/<username>/haddock3-mpi-container.git
+   git clone https://github.com/Comp-era/Apptainer-HADDOCK3.git
    cd Apptainer-Container-for-HADDOCK3/apptainer_reciepe
    ```
 
@@ -39,15 +35,15 @@ This repository provides everything to build, run, and extend an **Apptainer** c
    # Apptainer
    apptainer build haddock3_cpu-mpi.sif HADDOCK3.def
 
-   # (or) Singularity
+   # For Singularity
    singularity build haddock3_cpu-mpi.sif HADDOCK3.def
    ```
 
-   ⚙️ **Tip:** To add more utilities or tools (e.g., GROMACS, OpenMM, AmberTools, custom Python packages), simply modify the `%post` section of `HADDOCK3.def` before building.
+    **Tip:** To add more utilities or tools ( for custom tools or packages), simply modify the `%post` section of `HADDOCK3.def` before building.
 
 3. **Download Pre-built Image**
 
-   You can pull the pre-built image directly from GitHub’s Container Registry using the ORAS protocol:
+   You can also pull the pre-built image directly from GitHub’s Container Registry using the ORAS protocol:
 
    ```bash
    apptainer pull oras://ghcr.io/comp-era/haddock3:2025.06-v1.0-haddock3-mpi
@@ -63,6 +59,17 @@ This repository provides everything to build, run, and extend an **Apptainer** c
      ```bash
      apptainer exec haddock3_cpu-mpi.sif haddock3 --version
      ```
+
+   Once verified, you can either:
+
+Run locally on your system (for small test cases),
+
+Or use interactive sessions or job submission scripts on an HPC.
+
+Refer to the usage.md and the example SLURM script available in the scripts/ folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
+
+You can also run Jupyter Notebooks or JupyterLab inside the container for interactive sessions, analysis of outputs, data curation, or visualization of results. Make sure your $HOME directory contains the relevant input/output files and notebooks.
+
    - **Classic Notebook**:
      ```bash
      apptainer exec \
@@ -98,26 +105,19 @@ This repository provides everything to build, run, and extend an **Apptainer** c
    - **Session Management**: `tmux`, `screen`
    - **File Sync**: `rsync`
 
-6. **Examples**
-
-   ```bash
-   cd ../examples
-   ./notebook-setup.sh haddock3_cpu-mpi.sif
-   ```
-
 ---
 
 ##  Resources & Tutorials
 
 - **Apptainer Installation & Usage**: Detailed installation instructions and usage examples can be found on the official docs: [apptainer.org/docs/admin/main/installation.html](https://apptainer.org/docs/admin/main/installation.html)
-- **Official HADDOCK3 Tutorials**: Visit the Bonvin lab’s educational page for step-by-step HADDOCK3 tutorials and walkthroughs: [bonvinlab.org/education/HADDOCK3](https://www.bonvinlab.org/education/HADDOCK3/)
+- **Official HADDOCK3 Tutorials**: Visit the Bonvin lab’s educational page for HADDOCK3 tutorials : [bonvinlab.org/education/HADDOCK3](https://www.bonvinlab.org/education/HADDOCK3/)
 - **Source Code & Issues**: Explore the HADDOCK3 source, report issues, or contribute on GitHub: [github.com/haddocking/haddock3](https://github.com/haddocking/haddock3)
 
 ---
 
 ##  Requirements
 
-- **Host**: Linux with Apptainer or Singularity installed
+- **Host**: Linux with Apptainer or Singularity installed (local machine or HPC environment)
 - **Disk**: ≥ 2 GB free for building
 - **Python**: 3.10+ (inside container)
 
@@ -127,18 +127,15 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 See the `docs/` folder:
 
-- **usage.md** – Detailed run commands, notebook tips
-- **troubleshooting.md** – Build errors, runtime fixes
+- **usage.md** – Detailed run commands and tips
 
 ---
 
 ##  Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for:
+Kindly refer to [CONTRIBUTING.md](CONTRIBUTING.md) , for contributions.
 
-- Branching and PR guidelines
-- Code style and linting
-- Issue templates and code of conduct
+
 
 ---
 

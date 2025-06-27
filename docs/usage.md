@@ -1,44 +1,48 @@
-for sbatch 
+This guide explains how to run HADDOCK3 jobs either interactively or via SLURM batch submission (MPI HPC ready)
+---
+
+##  Quick Start
+
+### ▶ 1. Run Interactively with `srun`
+
+To  run HADDOCK3 in an interactive SLURM session:
+
+#example code
+
+srun --partition=compute \
+     --nodes=1 \
+     --ntasks-per-node=8 \
+     --chdir=/path/to/haddock3/examples/docking-protein-protein \
+     apptainer exec \
+     --bind /path/to/host:/path/to/host \
+     /path/to/haddock3_cpu-mpi.sif \
+     haddock3 docking-protein-protein-mpi.cfg
+
+```
+
+ *Note: Change the `.cfg` file path and directory bindings to match your project location.*
+
+---
+
+###  2. Run as a Batch Job with `sbatch`
+
+Submit your job to SLURM using the sample script in the `scripts/` folder:
+
+```bash
+scripts/ sbatch run_haddock3_slurm.sh
+```
+
+ *Customize the script for resource requirements and config paths as needed.*
+
+---
 
 
-#!/bin/bash
-
-#SBATCH --job-name=HADDOCK3-docking
-#SBATCH --output=HADDOCK3_%j.out
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=2
-#SBATCH --mem=128GB
-#SBATCH --partition=compute
-
-echo "Starting HADDOCK3 Docking Job"
-echo "SLURM_JOBID          = $SLURM_JOBID"
-echo "SLURM_JOB_NODELIST   = $SLURM_JOB_NODELIST"
-echo "SLURM_NNODES         = $SLURM_NNODES"
-echo "SLURMTMPDIR          = $SLURMTMPDIR"
-echo "Date                 = $(date)"
-echo "Hostname             = $(hostname -s)"
-echo "Working Directory    = $(pwd)"
-echo "Submit Directory     = $SLURM_SUBMIT_DIR"
-
-# Load necessary environment
-source /lustre/oneApi/setvars.sh
-export OMP_NUM_THREADS=1
-
-# Run HADDOCK3 via Apptainer
-cd /lustre/skhatri/haddock3/examples/docking-protein-protein
 
 
-apptainer exec --bind /lustre/skhatri:/lustre/skhatri \
-  /lustre/skhatri/haddock3_cpu-mpi.sif \
-  haddock3 docking-protein-protein-test.cfg
+## 📎 Requirements
 
-
-echo "HADDOCK3 Job Complete"
-echo "Completed at: $(date)"
-
-
-srun 
-srun --partition=compute --nodes=1 --ntasks-per-node=8 --chdir=/lustre/skhatri/haddock3/exampl
-es/docking-protein-protein singularity exec --bind /lustre/skhatri:/lustre/skhatri /lustre/skhatri/haddock3_cpu-mpi.sif haddock3 docking-pro
-tein-protein-mpi.cfg
+- SLURM-enabled HPC environment
+- Apptainer or Singularity installed
+- Apptainer image: `haddock-mpi-gpt.sif`
+- `.cfg` configuration file for HADDOCK3
 
