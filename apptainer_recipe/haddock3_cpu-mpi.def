@@ -3,7 +3,7 @@ From: ubuntu:22.04
 
 %labels
     Maintainer Shantanu Khatri
-    Description "HADDOCK3 + mpi4py container, with editors, monitoring, syncing & JupyterLab"
+    Description "HADDOCK3 container, with editors, monitoring, syncing "
 
 %environment
     export PATH=/usr/local/bin:$PATH
