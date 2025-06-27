@@ -2,10 +2,10 @@
 
 We're not just building containers—we're crafting efficient, elegant tools for science. If you're looking for ways to make a difference, consider contributing to:
 
--**New functionalities** (e.g., new features or  support)
--**Reducing redundancy** in scripts or layered installs
--**Shrinking image size** by stripping unused packages or optimizing layers
--**Lowering computational/carbon footprint** through performance tweaks or ecoconscious configurations (smaller images)
+- **New functionalities** (e.g., new features or support)  
+- **Reducing redundancy** in scripts or layered installs  
+- **Shrinking image size** by stripping unused packages or optimizing layers  
+- **Lowering computational/carbon footprint** through performance tweaks or ecoconscious configurations (smaller images)
 
 ##  Ideas Welcome — Let’s Connect!
 
