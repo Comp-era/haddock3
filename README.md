@@ -1,6 +1,7 @@
-# Apptainer Container for HADDOCK3 (MPI-Ready HPC)
+# Apptainer for HADDOCK3 (MPI-Ready HPC)
 
-This repository provides everything to build, run, and extend an **Apptainer** container for **HADDOCK3** with MPI support. **Apptainer** (formerly Singularity) is a container platform tailored for HPC environments — it enables reproducible, portable, and secure deployments without requiring root privileges, making it ideal for scientific workflows on clusters. **The biggest advantage** of Apptainer is that it seamlessly integrates with shared HPC filesystems and scheduler systems (e.g., SLURM, PBS) while preserving user permissions and security. **HADDOCK3** is the latest version of the HADDOCK (High Ambiguity Driven protein–protein Docking) platform, a flexible, information-driven docking software suite for modeling biomolecular complexes using experimental and theoretical restraints. The container is fully backward-compatible with **Singularity**, so you can build and use the same definition file with either tool. Alongside HADDOCK3 itself, the container bundles essential editors, monitoring tools, file-sync utilities, and interactive environments (classic Jupyter Notebook & JupyterLab), plus utility scripts and example workflows. You can easily customize the definition to include **additional utilities or domain-specific tools** when building your container image.
+This repository provides everything to build, run, and extend an **Apptainer** container for **HADDOCK3** with MPI support. **Apptainer** (formerly Singularity) is a container platform tailored for HPC environments — it enables reproducible, portable, and secure deployments without requiring root privileges, making it ideal for scientific workflows on clusters. **The biggest advantage** of Apptainer is that it seamlessly integrates with shared HPC filesystems and scheduler systems (e.g., SLURM, PBS) while preserving user permissions and security. [**HADDOCK3**](https://www.biorxiv.org/content/10.1101/2025.04.30.651432v1) is the latest version of the HADDOCK (High Ambiguity Driven protein–protein Docking) platform, a flexible, information-driven docking software suite for modeling biomolecular complexes using experimental and theoretical restraints. 
+The container is fully backward-compatible with **Singularity**, so you can build and use the same definition file with either tool. Alongside HADDOCK3 itself, the container bundles essential editors, monitoring tools, file-sync utilities, and interactive environments (classic Jupyter Notebook & JupyterLab), plus utility scripts. You can easily customize the definition to include additional utilities or domain-specific tools when building your container image.
 
 ---
 
@@ -64,9 +65,7 @@ This repository provides everything to build, run, and extend an **Apptainer** c
 
 Run locally on your system (for small test cases),
 
-Or use interactive sessions or job submission scripts on an HPC.
-
-Refer to the usage.md and the example SLURM script available in the scripts/ folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
+Or refer to the **usage.md** and the example SLURM script available in the scripts  folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
 
 You can also run Jupyter Notebooks or JupyterLab inside the container for interactive sessions, analysis of outputs, data curation, or visualization of results. Make sure your $HOME directory contains the relevant input/output files and notebooks.
 
@@ -111,7 +110,7 @@ You can also run Jupyter Notebooks or JupyterLab inside the container for intera
 
 - **Apptainer Installation & Usage**: Detailed installation instructions and usage examples can be found on the official docs: [apptainer.org/docs/admin/main/installation.html](https://apptainer.org/docs/admin/main/installation.html)
 - **Official HADDOCK3 Tutorials**: Visit the Bonvin lab’s educational page for HADDOCK3 tutorials : [bonvinlab.org/education/HADDOCK3](https://www.bonvinlab.org/education/HADDOCK3/)
-- **Source Code & Issues**: Explore the HADDOCK3 source, report issues, or contribute on GitHub: [github.com/haddocking/haddock3](https://github.com/haddocking/haddock3)
+- **Source Code & Issues**: Explore the HADDOCK3 source code on GitHub: [github.com/haddocking/haddock3](https://github.com/haddocking/haddock3)
 
 ---
 
@@ -127,7 +126,7 @@ You can also run Jupyter Notebooks or JupyterLab inside the container for intera
 
 See the `docs/` folder:
 
-- **usage.md** – Detailed run commands and tips
+- **usage.md** – Detailed uasge and tips
 
 ---
 

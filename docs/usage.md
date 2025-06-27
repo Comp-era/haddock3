@@ -32,14 +32,14 @@ Submit your job to SLURM using the sample script in the `scripts/` folder:
 scripts/ sbatch run_haddock3_slurm.sh
 ```
 
- *Customize the script for resource requirements and config paths as needed.*
+ *Customize the script and config paths as needed.*
 
 ---
 
 
 
 
-## 📎 Requirements
+##  Requirements
 
 - SLURM-enabled HPC environment
 - Apptainer or Singularity installed
