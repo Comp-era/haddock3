@@ -126,7 +126,7 @@ You can also run Jupyter Notebooks or JupyterLab inside the container for intera
 
 See the `docs/` folder:
 
-- **usage.md** – Detailed uasge and tips
+- **usage.md** – Detailed usage and instructions to run  apptainer. 
 
 ---
 
