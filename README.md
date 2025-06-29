@@ -88,7 +88,7 @@ You can also run Jupyter Notebooks or JupyterLab inside the container for intera
          --ServerApp.root_dir=$HOME/haddock3-mpi-container
      ```
 
-    **Note:** Some environments won’t auto-launch a browser. In that case:
+    **Note:** Since Jupyter runs on a compute node, you’ll need to forward the port to your local machine. This often requires a two-hop SSH tunnel if compute nodes are isolated. Some environments won’t auto-launch a browser. In that case:
 
    1. Copy the `http://127.0.0.1:8888/...` URL shown and paste it in your browser.
    2. Or run:
