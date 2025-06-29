@@ -71,19 +71,13 @@ You can also run Jupyter Notebooks or JupyterLab inside the container for intera
 
    - **Classic Notebook**:
      ```bash
-     apptainer exec \
-       --bind $HOME:$HOME \
-       haddock3_cpu-mpi.sif \
-       jupyter notebook \
+     jupyter notebook \
          --ip=0.0.0.0 --no-browser --allow-root \
          --ServerApp.root_dir=$HOME/haddock3-mpi-container
      ```
    - **JupyterLab**:
      ```bash
-     apptainer exec \
-       --bind $HOME:$HOME \
-       haddock3_cpu-mpi.sif \
-       jupyter lab \
+     jupyter lab \
          --ip=0.0.0.0 --no-browser --allow-root \
          --ServerApp.root_dir=$HOME/haddock3-mpi-container
      ```
