@@ -58,7 +58,7 @@ The container is fully backward-compatible with **Singularity**, so you can buil
      ```
    - **HADDOCK3**: verify installation
      ```bash
-     apptainer exec haddock3_cpu-mpi.sif haddock3 --version
+     apptainer shell haddock3_cpu-mpi.sif haddock3 --version
      ```
 
    Once verified, you can either:
