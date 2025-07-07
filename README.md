@@ -18,8 +18,6 @@ apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
 singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
   ```
 **Note:** Refer to the [**usage.md**](https://github.com/Comp-era/HADDOCK3-Container/blob/main/docs/usage.md) and the example SLURM script available in the `scripts` folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
-
-**Version updates:** The HADDOCK3 image is regularly updated,please check the tags at [ghcr.io/haddocking/haddock3](https://github.com/haddocking/haddock3/pkgs/container/haddock3) for the latest version.
 <pre> <strong>Version updates:</strong> The HADDOCK3 image is regularly updated. Please check the tags at <a href="https://github.com/haddocking/haddock3/pkgs/container/haddock3">ghcr.io/haddocking/haddock3</a> for the latest version. </pre>
 
 ---
