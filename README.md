@@ -52,7 +52,7 @@ If you want to understand how the container is built under the hood or customize
    # Apptainer
    apptainer build haddock3_cpu-mpi.sif HADDOCK3.def
 
-   # For Singularity
+   # Singularity
    singularity build haddock3_cpu-mpi.sif HADDOCK3.def
    ```
 
@@ -77,7 +77,7 @@ If you want to understand how the container is built under the hood or customize
      apptainer shell haddock3_cpu-mpi.sif haddock3 --version
      ```
 
-
+---
 ##  Resources & Tutorials
 
 - **Apptainer Installation & Usage**: Detailed installation instructions and usage examples can be found on the official docs: [apptainer.org/docs/admin/main/installation.html](https://apptainer.org/docs/admin/main/installation.html)
