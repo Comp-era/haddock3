@@ -46,7 +46,7 @@ If you want to understand how the container is built under the hood or customize
 
 ---
 
-2. **Build** (Apptainer or Singularity)
+2. **Build** 
 
    ```bash
    # Apptainer
@@ -56,7 +56,7 @@ If you want to understand how the container is built under the hood or customize
    singularity build haddock3_cpu-mpi.sif HADDOCK3.def
    ```
 
-    **Tip:** To add more utilities or tools ( for custom tools or packages), simply modify the `%post` section of `HADDOCK3.def` before building.
+    **Tip:** To create your own definition files to layer in additional packages, alternative MPI variants, Python libraries, and any domain-specific utilities. ( for custom tools or packages), simply modify the `%post` section of `HADDOCK3.def` before building.
 
 3. **Download Pre-built Image**
 
@@ -66,7 +66,7 @@ If you want to understand how the container is built under the hood or customize
    apptainer pull oras://ghcr.io/comp-era/haddock3:2025.06-v1.0-haddock3-mpi
    ```
 
-4. **Run**
+4. **Verify&Run**
 
    - **Shell**: interactive access
      ```bash
@@ -76,10 +76,6 @@ If you want to understand how the container is built under the hood or customize
      ```bash
      apptainer shell haddock3_cpu-mpi.sif haddock3 --version
      ```
-
-   Once verified, you can either:
-
-Run locally on your system (for small test cases),
 
 
 ##  Resources & Tutorials
