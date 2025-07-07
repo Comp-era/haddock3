@@ -53,14 +53,14 @@ If you want to understand how the container is built under the hood or customize
 2. **Build** 
 
 A definition file is a blueprint that tells the containerization platform how to build the container. It specifies the base OS, software packages, environment variables, and custom setup steps, ensuring your container is reproducible and tailored to your workflow.
-A ready-to-use `HADDOCK3.def` is provided in the ([../recipe](https://github.com/Comp-era/HADDOCK3-Container/tree/main/recipe)) directory.
+A ready-to-use `HADDOCK3.def` is provided in the ([/recipe](https://github.com/Comp-era/HADDOCK3-Container/tree/main/recipe)) directory.
 
    ```bash
    # Apptainer
-   apptainer build haddock3_cpu-mpi.sif HADDOCK3.def
+   apptainer build haddock3_cpu-mpi.sif haddock3_mpi.def
 
    # Singularity
-   singularity build haddock3_cpu-mpi.sif HADDOCK3.def
+   singularity build haddock3_cpu-mpi.sif haddock3_mpi.def
    ```
 
     **Tip:** To create your own definition files to layer in additional packages, alternative MPI variants, Python libraries, and any domain-specific utilities. ( for custom tools or packages), simply modify the `%post` section of `HADDOCK3.def` before building.
