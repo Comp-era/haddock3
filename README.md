@@ -18,7 +18,7 @@ singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version
 ---
 
 ##  DIY & Quick Start
-If you’d like to explore the definition and learn how to build the HADDOCK3 container yourself, follow these steps:
+If you want to understand how the container is built under the hood or customize it for your own workflows? Follow these detailed steps to clone the repo, inspect the definition, and build your own MPI-enabled HADDOCK3 apptainer:
 
 1. **Clone**
 
