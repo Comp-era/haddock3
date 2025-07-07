@@ -3,7 +3,7 @@ This guide explains how to run HADDOCK3 jobs either interactively or via SLURM b
 
 ##  Quick Start
 
-### ▶ 1. Run Interactively with `srun`
+###  1. Run Interactively with `srun`
 
 To  run HADDOCK3 in an interactive SLURM session:
 
