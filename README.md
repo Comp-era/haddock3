@@ -25,8 +25,8 @@ If you want to understand how the container is built under the hood or customize
 1. **Clone**
 
    ```bash
-   git clone https://github.com/Comp-era/Apptainer-HADDOCK3.git
-   cd Apptainer-Container-for-HADDOCK3/apptainer_reciepe
+   git clone https://github.com/Comp-era/HADDOCK3-Container.git
+   cd HADDOCK3-Container/apptainer_reciepe
    ```
 ---
 
