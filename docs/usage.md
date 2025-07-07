@@ -42,7 +42,7 @@ scripts/ sbatch run_haddock3_slurm.sh
 ##  Requirements
 
 - SLURM-enabled HPC environment
-- Apptainer or Singularity installed
-- Apptainer image: `haddock-mpi-gpt.sif`
+- Docker, Apptainer or Singularity installed
+- Image: `haddock-mpi-gpt.sif`
 - `.cfg` configuration file for HADDOCK3
 
