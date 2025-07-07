@@ -12,7 +12,7 @@ apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
 
 # Or, build with Singularity
 singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
-
+  ```
  **Note:** Refer to the **usage.md** and the example SLURM script available in the scripts  folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
 
 ---
