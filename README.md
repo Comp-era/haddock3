@@ -38,7 +38,7 @@ If you want to understand how the container is built under the hood or customize
 
 ```plaintext
 ├── apptainer_recipe/                  
-│   └── HADDOCK3.def              # Apptainer/Singularity definition file
+│   └── HADDOCK3.def              # Definition file
 ├── docs/                         # Documentation 
 │   ├── usage.md                  # Usage guide
 ├── scripts/                      # Scripts
