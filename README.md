@@ -23,7 +23,7 @@ singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
 ---
 
 ### Build Your Own HADDOCK3 Container
-Containerization techniques enable highly reproducible, customizable, and scalable scientific workflows. If you want to understand how the container is built under the hood or customize it for   your own workflows, follow these detailed steps:
+Containerization techniques enable highly reproducible, customizable, and scalable scientific workflows. If you want to understand how the container is built under the hood from scratch or customize it for your own workflows, follow these detailed steps:
 1. **Clone**
 
     ```bash
