@@ -6,7 +6,7 @@ A ready-to-use Docker image for HADDOCK3 is published on the GitHub container re
 ```bash
 docker pull ghcr.io/haddocking/haddock3:2025.5.0
 ```
-See the [pkgs/container/haddock3](ghcr.io/haddocking/haddock3:2025.5.0) for details and version tags. This image serves as the canonical, versioned distribution of HADDOCK3 and can be used across development, CI/CD, and cloud environments.
+See the [HADDOCK3 container package](https://github.com/haddocking/haddock3/pkgs/container/haddock3) for details and version tags. This image serves as the canonical, versioned distribution of HADDOCK3 and can be used across development, CI/CD, and cloud environments.
 
 To use this as the foundation for HPC-friendly SIF images, build **Apptainer** or **Singularity** containers directly from the Docker image in a single step. For example, to create an image:
 
@@ -23,12 +23,12 @@ singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
 ---
 
 ##  Build Your Own HADDOCK3 Container
-Containerization techniques enable highly reproducible, customizable, and scalable scientific workflows. If you want to understand how the container is built under the hood or customize it for your own workflows? Follow these detailed steps to clone the repo, inspect the definition, and build your own MPI-enabled HADDOCK3 apptainer:
+Containerization techniques enable highly reproducible, customizable, and scalable scientific workflows. If you want to understand how the container is built under the hood or customize it for your own workflows, follow these detailed steps:
 1. **Clone**
 
    ```bash
    git clone https://github.com/Comp-era/HADDOCK3-Container.git
-   cd HADDOCK3-Container/reciepe
+   cd HADDOCK3-Container/recipe
 
 
 ##  Repository Structure
@@ -48,7 +48,7 @@ Containerization techniques enable highly reproducible, customizable, and scalab
 2. **Build** 
 
 A definition file is a blueprint that tells the containerization platform how to build the container. It specifies the base OS, software packages, environment variables, and custom setup steps, ensuring your container is reproducible and tailored to your workflow.
-A ready-to-use `HADDOCK3.def` is provided in the ([/recipe](https://github.com/Comp-era/HADDOCK3-Container/tree/main/recipe)) directory.
+A ready-to-use `HADDOCK3.def` is provided in the ([recipe](https://github.com/Comp-era/HADDOCK3-Container/tree/main/recipe)) directory.
 
    ```bash
    # Apptainer
