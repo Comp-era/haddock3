@@ -58,7 +58,7 @@ A ready-to-use `HADDOCK3.def` is provided in the ([recipe/](https://github.com/C
    singularity build haddock3_mpi.sif haddock3_mpi.def
    ```
 
-    **Tip:** To create your own definition files to layer in additional packages, alternative MPI variants, Python libraries, and any domain-specific utilities. ( for custom tools or packages), simply modify the `%post` section of `HADDOCK3.def` before building.
+    **Tip:** To create your own definition files to layer in additional packages, alternative MPI variants, Python libraries, and any domain-specific utilities.YOu can simply modify the `%post` section of `HADDOCK3.def` before building.
 
 3. **Download Pre-built Image**
 
