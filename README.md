@@ -7,7 +7,7 @@ A ready-to-use Docker image for **HADDOCK3** is published on the GitHub containe
 To use this as the foundation for HPC-friendly SIF images, build **Apptainer** or **Singularity** containers directly from the Docker image in a single step. For example, to create an image:
 
 ```bash
-# Build MPI-enabled Apptainer image
+# Build Apptainer image
 apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
 
 # Or, build with Singularity
