@@ -2,7 +2,11 @@
 
 This repository provides everything you need to build, run, and extend an **Apptainer/Singularity** container for **HADDOCK3**. [**HADDOCK3**](https://www.biorxiv.org/content/10.1101/2025.04.30.651432v1)(High Ambiguity Driven protein–protein Docking) is a flexible, information-driven software suite for modeling biomolecular complexes using experimental and theoretical restraints. **Docker**, **Singularity**, and **Apptainer** are containerization platforms that package applications and all their dependencies into lightweight, portable images, ensuring reproducible execution across different environments.
 
-A ready-to-use Docker image for **HADDOCK3** is published on the GitHub container registry, simply pull `ghcr.io/haddocking/haddock3` (see the [HADDOCK3 source code ](https://github.com/haddocking/haddock3) for details and version tags). This image serves as the canonical, versioned distribution of HADDOCK3 and can be used across development, CI/CD, and cloud environments.
+A ready-to-use Docker image for **HADDOCK3** is published on the GitHub container registry, simply pull:
+```bash
+docker pull ghcr.io/haddocking/haddock3:2025.5.0
+```
+See the [HADDOCK3 source code ](https://github.com/haddocking/haddock3) for details and version tags. This image serves as the canonical, versioned distribution of HADDOCK3 and can be used across development, CI/CD, and cloud environments.
 
 To use this as the foundation for HPC-friendly SIF images, build **Apptainer** or **Singularity** containers directly from the Docker image in a single step. For example, to create an image:
 
