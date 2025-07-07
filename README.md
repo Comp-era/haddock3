@@ -31,18 +31,20 @@ Containerization techniques enable highly reproducible, customizable, and scalab
    cd HADDOCK3-Container/recipe
 
 
-####  Repository Structure
-```plaintext
-├── apptainer_recipe/                  
-│   └── HADDOCK3.def              # Definition file
-├── docs/                         # Documentation 
-│   ├── usage.md                  # Usage guide
-├── scripts/                      # Scripts
-│   ├── slurm_run.sh              # Multi-node MPI run script
-├── LICENSE                       # MIT License
-├──  README.md                    # Overview
-└── CONTRIBUTING.md               # Contribution guidelines
-```
+    **Repository Structure**
+    
+    ```plaintext
+    ├── apptainer_recipe/                  
+    │   └── HADDOCK3.def              # Definition file
+    ├── docs/                         # Documentation 
+    │   ├── usage.md                  # Usage guide
+    ├── scripts/                      # Scripts
+    │   ├── slurm_run.sh              # Multi-node MPI run script
+    ├── LICENSE                       # MIT License
+    ├── README.md                     # Overview
+    └── CONTRIBUTING.md              # Contribution guidelines
+    ```
+
 
 2. **Build** 
 
