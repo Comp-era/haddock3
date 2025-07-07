@@ -1,8 +1,33 @@
-# Apptainer for HADDOCK3 (MPI-Ready HPC)
+# Container run workflow for HADDOCK3
 
-This repository provides everything to build, run, and extend an **Apptainer** container for **HADDOCK3** with MPI support. **Apptainer** (formerly Singularity) is a container platform tailored for HPC environments. It enables reproducible, portable, and secure deployments without requiring root privileges, making it ideal for scientific workflows on clusters. The biggest advantage of Apptainer is that it seamlessly integrates with shared HPC filesystems and scheduler systems (e.g., SLURM, PBS) while preserving user permissions and security. [**HADDOCK3**](https://www.biorxiv.org/content/10.1101/2025.04.30.651432v1) is the latest version of the HADDOCK (High Ambiguity Driven protein–protein Docking) platform, a flexible, information-driven docking software suite for modeling biomolecular complexes using experimental and theoretical restraints.  
-The container is fully backward-compatible with **Singularity**, so you can build and use the same definition file with either tool. Alongside HADDOCK3 itself, the container bundles essential editors, monitoring tools, file-sync utilities, and interactive environments (classic Jupyter Notebook & JupyterLab), plus utility scripts. You can easily customize the definition to include additional utilities or domain-specific tools when building your container image.
+This repository provides everything you need to build, run, and extend an **Apptainer/Singularity** container for **HADDOCK3**. [**HADDOCK3**](https://www.biorxiv.org/content/10.1101/2025.04.30.651432v1)(High Ambiguity Driven protein–protein Docking) is a flexible, information-driven software suite for modeling biomolecular complexes using experimental and theoretical restraints.
 
+**Docker**, **Singularity**, and **Apptainer** are containerization platforms that package applications and all their dependencies into lightweight, portable images—ensuring reproducible execution across different environments.
+
+A ready-to-use Docker image for **HADDOCK3** is published on the GitHub container registry—simply pull `ghcr.io/haddocking/haddock3` (see the [HADDOCK3 source code ](https://github.com/haddocking/haddock3) for details and version tags). This image serves as the canonical, versioned distribution of **HADDOCK3** and can be used across development, CI/CD, and cloud environments.
+
+To use this as the foundation for HPC-friendly SIF images, build **Apptainer** or **Singularity** containers directly from the Docker image in a single step. For example, to create an image:
+
+```bash
+# Build MPI-enabled Apptainer image
+apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
+
+# Or, build with Singularity
+singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
+
+ **Note:** Refer to the **usage.md** and the example SLURM script available in the scripts  folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
+
+---
+
+##  DIY & Quick Start
+If you’d like to explore the definition and learn how to build the HADDOCK3 container yourself, follow these steps:
+
+1. **Clone**
+
+   ```bash
+   git clone https://github.com/Comp-era/Apptainer-HADDOCK3.git
+   cd Apptainer-Container-for-HADDOCK3/apptainer_reciepe
+   ```
 ---
 
 ##  Repository Structure
@@ -21,15 +46,6 @@ The container is fully backward-compatible with **Singularity**, so you can buil
 
 ---
 
-##  Quick Start
-
-1. **Clone**
-
-   ```bash
-   git clone https://github.com/Comp-era/Apptainer-HADDOCK3.git
-   cd Apptainer-Container-for-HADDOCK3/apptainer_reciepe
-   ```
-
 2. **Build** (Apptainer or Singularity)
 
    ```bash
@@ -44,7 +60,7 @@ The container is fully backward-compatible with **Singularity**, so you can buil
 
 3. **Download Pre-built Image**
 
-   You can also pull the pre-built image directly from GitHub’s Container Registry using the ORAS protocol:
+   You can also pull the pre-built apptainer image I created directly from GitHub’s container registry using the ORAS protocol:
 
    ```bash
    apptainer pull oras://ghcr.io/comp-era/haddock3:2025.06-v1.0-haddock3-mpi
@@ -65,40 +81,6 @@ The container is fully backward-compatible with **Singularity**, so you can buil
 
 Run locally on your system (for small test cases),
 
-Or refer to the **usage.md** and the example SLURM script available in the scripts  folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
-
-You can also run Jupyter Notebooks or JupyterLab inside the container for interactive sessions, analysis of outputs, data curation, or visualization of results. Make sure your $HOME directory contains the relevant input/output files and notebooks.
-
-   - **Classic Notebook**:
-     ```bash
-     jupyter notebook \
-         --ip=0.0.0.0 --no-browser --allow-root \
-         --ServerApp.root_dir=$HOME/haddock3-mpi-container
-     ```
-   - **JupyterLab**:
-     ```bash
-     jupyter lab \
-         --ip=0.0.0.0 --no-browser --allow-root \
-         --ServerApp.root_dir=$HOME/haddock3-mpi-container
-     ```
-
-    **Note:** Since Jupyter runs on a compute node, you’ll need to forward the port to your local machine. This often requires a two-hop SSH tunnel if compute nodes are isolated. Some environments won’t auto-launch a browser. In that case:
-
-   1. Copy the `http://127.0.0.1:8888/...` URL shown and paste it in your browser.
-   2. Or run:
-      ```bash
-      xdg-open http://127.0.0.1:8888/?token=<your-token>
-      ```
-
-5. **Utilities & Editors** The container includes tools for development and debugging:
-
-   - **Editors**: `vim`, `nano`, `emacs`
-   - **Paging & Search**: `less`, `grep`, `ack`, `ripgrep`
-   - **Process Monitoring**: `htop`, `ps`, `strace`, `lsof`
-   - **Session Management**: `tmux`, `screen`
-   - **File Sync**: `rsync`
-
----
 
 ##  Resources & Tutorials
 
