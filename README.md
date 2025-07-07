@@ -8,12 +8,13 @@ To use this as the foundation for HPC-friendly SIF images, build **Apptainer** o
 
 ```bash
 # Build Apptainer image
-apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
+apptainer build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
 
 # Or, build with Singularity
-singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:<version>
+singularity build haddock3_mpi.sif docker://ghcr.io/haddocking/haddock3:2025.5.0
   ```
 **Note:** Refer to the [**usage.md**](https://github.com/Comp-era/HADDOCK3-Container/blob/main/docs/usage.md) and the example SLURM script available in the `scripts` folder for detailed instructions on how to run HADDOCK3 jobs in an HPC environment.
+**Version updates:** The HADDOCK3 image is regularly updated—please check the tags at [ghcr.io/haddocking/haddock3](https://github.com/haddocking/haddock3/pkgs/container/haddock3) for the latest version.
 
 ---
 
