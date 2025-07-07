@@ -18,8 +18,6 @@ srun --partition=compute \
      /path/to/haddock3_cpu-mpi.sif \
      haddock3 docking-protein-protein-mpi.cfg
 
-```
-
  *Note: Change the `.cfg` file path and directory bindings to match your project location.*
 
 ---
