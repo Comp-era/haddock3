@@ -31,8 +31,7 @@ Containerization techniques enable highly reproducible, customizable, and scalab
    ```bash
    git clone https://github.com/Comp-era/HADDOCK3-Container.git
    cd HADDOCK3-Container/reciepe
-   ```
----
+
 
 ##  Repository Structure
 
