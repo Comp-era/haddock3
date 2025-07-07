@@ -59,16 +59,8 @@ A ready-to-use `HADDOCK3.def` is provided in the ([recipe/](https://github.com/C
    ```
 
     **Tip:** To create your own definition files to layer in additional packages, alternative MPI variants, Python libraries, and any domain-specific utilities.Just simply modify the `%post` section of `HADDOCK3.def` before building.
-
-3. **Download Pre-built Image**
-
-   You can also pull the pre-built apptainer image I created directly from GitHub’s container registry using the ORAS protocol:
-
-   ```bash
-   apptainer pull oras://ghcr.io/comp-era/haddock3:2025.06-v1.0-haddock3-mpi
-   ```
-
-4. **Verify&Run**
+    
+3. **Verify&Run**
 
    - **Shell**: interactive access
      ```bash
@@ -79,7 +71,16 @@ A ready-to-use `HADDOCK3.def` is provided in the ([recipe/](https://github.com/C
      apptainer shell haddock3_cpu-mpi.sif haddock3 --version
      ```
 
+
+4. **Download a pre-built image**
+
+   You can also pull the pre-built apptainer image I created directly from GitHub’s container registry using the ORAS protocol:
+
+   ```bash
+   apptainer pull oras://ghcr.io/comp-era/haddock3:2025.06-v1.0-haddock3-mpi
+   ```
 ---
+
 ##  Resources & Tutorials
 
 - **Apptainer Installation & Usage**: Detailed installation instructions and usage examples can be found on the official docs: [apptainer.org/docs/admin/main/installation.html](https://apptainer.org/docs/admin/main/installation.html)
