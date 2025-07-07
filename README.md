@@ -51,8 +51,9 @@ If you want to understand how the container is built under the hood or customize
 ---
 
 2. **Build** 
+
 A definition file is a blueprint that tells the containerization platform how to build the container. It specifies the base OS, software packages, environment variables, and custom setup steps, ensuring your container is reproducible and tailored to your workflow.
-A ready-to-use `HADDOCK3.def` is provided in the [`recipe`](../recipe) directory.
+A ready-to-use `HADDOCK3.def` is provided in the ([../recipe](https://github.com/Comp-era/HADDOCK3-Container/tree/main/recipe)) directory.
 
    ```bash
    # Apptainer
