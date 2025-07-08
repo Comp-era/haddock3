@@ -117,7 +117,7 @@ Kindly refer to [CONTRIBUTING.md](CONTRIBUTING.md) , for contributions.
 
 MIT License © 2025 Shantanu Khatri.
 
----
+--
 
-*Get ready for seamless HADDOCK3 runs, interactive analyses, and reproducible workflows!*
+*Get ready for seamless reproducible workflow for HADDOCK3 runs!*
 
